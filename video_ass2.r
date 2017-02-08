@@ -1,5 +1,5 @@
 library(png)
-source("video_ass1_functions.r")
+source("functions.r")
 
 # Read in the original image
 orig=readPNG("original.png")

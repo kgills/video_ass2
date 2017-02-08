@@ -100,3 +100,25 @@ print_bit <- function(img) {
     grid::grid.raster(img)
 }
 
+# Add gausian noise to the given image
+# Operates on 8-bit color image. Each color operated independently
+# Does not operate on border pixels
+gaus_filter <- function(img, sigma, dim) {
+    
+    # Operate on each color independently
+    # h(u,v) = (1/(2*pi*sigma^2))*e^(-((u^2 + v^2)/sigma^2))
+    # Calculate h(u,v) for the dimension
+
+    for (i in seq_len(dim(img)[1])) {
+        for (j in seq_len(dim(img)[2])) {
+            # Continue if i or j is less than dim, or greater than 
+            # dim(img) - dim
+
+            for (k in seq_len(dim(img)[3])) {
+                # Apply the calculated h(u,v) filter to the pixels
+
+                # Sum the results
+            }
+        }
+    }
+}
